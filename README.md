@@ -3,7 +3,9 @@
 - Come prima cosa bisogna creare una cartella con il nome corretto
 - successivamente bisogna inserire la cartella su Visual Studio
 - dobbiamo creare un nuovo progetto con il comando "dotnet new console"
-- dal web scarichiamo chinook.db : link per scaricarlo https://www.sqlitetutorial.net/sqlite-sample-database/ 
+- dal web scarichiamo chinook.db : link per scaricarlo https://www.sqlitetutorial.net/sqlite-sample-database/
+- 
+
 
 
 - Puoi installare e utilizzare il database di esempio Chinook utilizzando:
