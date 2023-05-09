@@ -24,13 +24,13 @@ Download SQLite sample database
   PS C:\Users\Karol\Desktop\basilico.karol.4h.LINQDb> dotnet add package sqlite-net-pcl
   
 -come primo comando scrivere scrivere la riga di codice che ci permette di accedere alla libreria
-###
-  SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
 ###  
+  SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
+###    
 -poi inserisci la libreria che ci permette di selezionare quello che vogliamo dal DB :
-### 
+###   
   var tblArtists = cn1.Query<Artist>("select * from artists");
-### 
+###   
 -riga di codice usiamo il comando che ci permette di ordinare gli ID degli artisti:
  ###
   var temporanea = tblArtists.OrderByDescending(x => x.Name).Max( y => y.ArtistId);
