@@ -1,5 +1,15 @@
 # karol.basilico.4h.LINQDb
-
+//
+- Come prima cosa creare una cartella con il nome giusto
+- successivamente bisogna inserire la cartella su visual studio
+- dobbiamo creare un nuovo progetto con il comando "dotnet new console"
+- dal web scarichiamo chinook.db e metterlo nella cartella su visual studio
+- dopo questi passaggi si può iniziare a scrivere il codice
+- primo comando da aggiungere è using SQLite;
+ poi allego il codice che segue
+ using SQLite;
+ //
+ 
 -Puoi installare e utilizzare il database di esempio Chinook utilizzando:
  Un'installazione locale di YugabyteDB.
  Per installare YugabyteDB, fare riferimento a Quick Start.
