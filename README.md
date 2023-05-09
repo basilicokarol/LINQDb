@@ -4,6 +4,10 @@
 - successivamente bisogna inserire la cartella su Visual Studio
 - dobbiamo creare un nuovo progetto con il comando "dotnet new console"
 - dal web scarichiamo chinook.db : link per scaricarlo https://www.sqlitetutorial.net/sqlite-sample-database/ 
+- Download SQLite sample database
+You can download the SQLite sample database using the following link.
+
+Download SQLite sample database
 - Puoi installare e utilizzare il database di esempio Chinook utilizzando:
  Un'installazione locale di YugabyteDB.
  Per installare YugabyteDB, fare riferimento a Quick Start.
