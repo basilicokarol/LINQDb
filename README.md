@@ -25,72 +25,72 @@ Download SQLite sample database
   
 -come primo comando scrivere scrivere la riga di codice che ci permette di accedere alla libreria
 ###  
-  SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
+     SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
 ###    
 -poi inserisci la libreria che ci permette di selezionare quello che vogliamo dal DB :
 ###   
-  var tblArtists = cn1.Query<Artist>("select * from artists");
+    var tblArtists = cn1.Query<Artist>("select * from artists");
 ###   
 -riga di codice usiamo il comando che ci permette di ordinare gli ID degli artisti:
  ###
-  var temporanea = tblArtists.OrderByDescending(x => x.Name).Max( y => y.ArtistId);
+    var temporanea = tblArtists.OrderByDescending(x => x.Name).Max( y => y.ArtistId);
  ### 
 -  fare il foreach e poi si stampiamo il numero dei record
  ###
- foreach(var record in tblArtists)
-{
-    Console.WriteLine( $"{record.Name}");
-}
+   foreach(var record in tblArtists)
+  {
+      Console.WriteLine( $"{record.Name}");
+  }
 
-Console.WriteLine( $"{temporanea}");
+  Console.WriteLine( $"{temporanea}");
  ###
 - codice completo di svolgimento:
  ###
- // See https://aka.ms/new-console-template for more information
-using SQLite;
-//27/4/2023
-//connessione al db
+   // See https://aka.ms/new-console-template for more information
+    using SQLite;
+  //27/4/2023
+  //connessione al db
 
 
-SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
-var tblArtists = cn1.Query<Artist>("select * from artists");
-Console.WriteLine($"in questa tabella ci sono {tblArtists.Count}record");
+  SQLiteConnection cn1 = new SQLiteConnection("chinook.db");
+  var tblArtists = cn1.Query<Artist>("select * from artists");
+  Console.WriteLine($"in questa tabella ci sono {tblArtists.Count}record");
 
 
-//language INtegrate Query
-//LINQ
+  //language INtegrate Query
+  //LINQ
 
-//4/5/2023
-//foreach si passa tutti i record e mi scrive il nome
+  //4/5/2023
+  //foreach si passa tutti i record e mi scrive il nome
 
-/*int x=0;
-Artists[] vect= new[tblArtists.Count];
-
-
-while(x<tblArtists.Count)
-{
-    vect[x] = tblArtists[x].Name;
-    x++;
-}
-*/
-
-var temporanea = tblArtists.OrderByDescending(x => x.Name).Max( y => y.ArtistId);
-
-foreach(var record in tblArtists)
-{
-    Console.WriteLine( $"{record.Name}");
-}
-
-Console.WriteLine( $"{temporanea}");
+  /*int x=0;
+  Artists[] vect= new[tblArtists.Count];
 
 
-// Fine del main --- inizio delle dichiarazioni ---
-public class Artist
-{
-    public int ArtistId{get;set;}
-    public string Name{get;set;}
+  while(x<tblArtists.Count)
+  {
+      vect[x] = tblArtists[x].Name;
+      x++;
+  }
+  */
 
-}
+  var temporanea = tblArtists.OrderByDescending(x => x.Name).Max( y => y.ArtistId);
+
+  foreach(var record in tblArtists)
+  {
+       Console.WriteLine( $"{record.Name}");
+  }
+
+  Console.WriteLine( $"{temporanea}");
+
+
+  // Fine del main --- inizio delle dichiarazioni ---
+  public class Artist
+   {
+      public int ArtistId{get;set;}
+       public string Name{get;set;}
+
+  }
 ###
  
 - allego il risultato che si ottiene:
